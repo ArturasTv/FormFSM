@@ -26,7 +26,7 @@ function App() {
 
 	return (
 		<div className="h-screen w-screen flex justify-center items-center">
-			<div className="flex flex-col items-center">
+			<div className="flex flex-col space-y-6 items-center">
 				<ProgressBar options={progress} />
 				{state === "first" && (
 					<LoginForm title="First Login form" handleSubmit={handleNext} />
