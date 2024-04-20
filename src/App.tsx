@@ -1,12 +1,7 @@
-import './App.css'
+import "./App.css";
 
 function App() {
-
-  return (
-    <div>
-      empty project
-    </div>
-  )
+	return <div>empty project</div>;
 }
 
-export default App
+export default App;
