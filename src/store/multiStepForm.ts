@@ -29,8 +29,7 @@ const useBearStore = create<MultiStepFormStore>()((set, get) => ({
 		const currentState = get().state;
 
 		const current = transitions.find(
-			(transition) =>
-				transition.from === currentState && transition.trigger === "next",
+			({ from, trigger }) => from === currentState && trigger === "next",
 		);
 		if (current) {
 			set({ state: current.to });
@@ -40,8 +39,7 @@ const useBearStore = create<MultiStepFormStore>()((set, get) => ({
 		const currentState = get().state;
 
 		const current = transitions.find(
-			(transition) =>
-				transition.from === currentState && transition.trigger === "previous",
+			({ from, trigger }) => from === currentState && trigger === "previous",
 		);
 		if (current) {
 			set({ state: current.to });
