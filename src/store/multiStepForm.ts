@@ -23,7 +23,7 @@ const transitions: Transition[] = [
 	{ from: "first", to: "third", trigger: "previous" },
 ];
 
-const useBearStore = create<MultiStepFormStore>()((set, get) => ({
+const useMultiStepFormStore = create<MultiStepFormStore>()((set, get) => ({
 	state: "first",
 	next: () => {
 		const currentState = get().state;
@@ -47,4 +47,4 @@ const useBearStore = create<MultiStepFormStore>()((set, get) => ({
 	},
 }));
 
-export default useBearStore;
+export default useMultiStepFormStore;

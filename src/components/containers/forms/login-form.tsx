@@ -2,9 +2,16 @@ import Form from "../../ui/form";
 import Input from "../../ui/input";
 import Button from "../../ui/button";
 
-function LoginForm() {
+type Props = {
+	title?: string;
+	handleSubmit?: () => void;
+	handleGoBack?: () => void;
+};
+
+function LoginForm({ title, handleSubmit, handleGoBack }: Props) {
 	return (
 		<Form>
+			<h1 className="text-2xl font-bold">{title}</h1>
 			<Input
 				id="email"
 				name="email"
@@ -23,7 +30,16 @@ function LoginForm() {
 					htmlFor: "password",
 				}}
 			/>
-			<Button type="submit">Sign in</Button>
+			{handleSubmit && (
+				<Button onClick={() => handleSubmit()} type="button">
+					Next
+				</Button>
+			)}
+			{handleGoBack && (
+				<Button onClick={() => handleGoBack()} type="button">
+					Back
+				</Button>
+			)}
 		</Form>
 	);
 }
