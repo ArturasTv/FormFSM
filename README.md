@@ -41,5 +41,5 @@ Feel free to fork this project and submit a pull request if you have any ideas o
 
 ## Roadmap
 
-- [ ] Create a multiStepForm store that can be dynamically initialized with states and transitions.
-- [ ] Evaluate the need for both the `useProgress` and `multiStepForm` stores, considering potential overlap or redundancy. Decide whether to update `useProgress` to function as an abstraction of the FSM store or remove it entirely.
+- [ ] Create a `multiStepForm` store that can be dynamically initialized with states and transitions.
+- [ ] Evaluate the need of the `useProgress` hook considering potential overlap or redundancy with the `multiStepForm` store. Decide whether to update `useProgress` to function as a React hook as an abstraction of the `multiStepForm` store or remove it entirely.
