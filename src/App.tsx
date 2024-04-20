@@ -1,5 +1,11 @@
+import LoginForm from "./components/containers/forms/login-form";
+
 function App() {
-	return <h1 className="text-3xl font-bold underline">Hello world!</h1>;
+	return (
+		<div className="h-screen w-screen flex justify-center items-center">
+			<LoginForm />
+		</div>
+	);
 }
 
 export default App;
